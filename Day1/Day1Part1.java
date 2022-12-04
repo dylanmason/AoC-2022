@@ -8,9 +8,8 @@ public class Day1Part1 {
         try {
             File file = new File("Day1Part1.txt");
             Scanner scan = new Scanner(file);
-            int prev = 0;
-            int curr = 0;
-            int ans = 0;
+            int prev, curr, ans;
+            prev = curr = ans = 0;
             while (scan.hasNext()) {
                 String str = scan.nextLine();
                 if (str.isEmpty()) {
