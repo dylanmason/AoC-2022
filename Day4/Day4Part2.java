@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class Day4Part1 {
+public class Day4Part2 {
 
     public static void main(String[] args) {
         try {
@@ -20,7 +20,8 @@ public class Day4Part1 {
                 int thirdNum = Integer.parseInt(secondHalf.substring(0, secondHalf.indexOf("-")));
                 int fourthNum = Integer.parseInt(secondHalf.substring(secondHalf.indexOf("-") + 1, secondHalf.length()));
 
-                if ((firstNum <= thirdNum && secondNum >= fourthNum) || (thirdNum <= firstNum && fourthNum >= secondNum)) {
+                if ((firstNum <= thirdNum && secondNum >= fourthNum) || (thirdNum <= firstNum && fourthNum >= secondNum) || 
+                        ((firstNum <= thirdNum && secondNum >= thirdNum) || (firstNum <= fourthNum && secondNum >= fourthNum))) {
                     count++;
                 }
             }
