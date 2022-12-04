@@ -10,16 +10,13 @@ public class Day1Part2 {
         try {
             File file = new File("Day1Part1.txt");
             Scanner scan = new Scanner(file);
-            int prev = 0;
-            int curr = 0;
-            int ans = 0;
+            int prev, curr, ans;
+            prev = curr = ans = 0;
             ArrayList<Integer> arr = new ArrayList<Integer>();
-            int index = 0;
             while (scan.hasNext()) {
                 String str = scan.nextLine();
                 if (str.isEmpty()) {
                     if (curr > prev) {
-                        index++;
                         prev = curr;
                     }
                     arr.add(curr);

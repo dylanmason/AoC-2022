@@ -15,7 +15,6 @@ public class Day1Part1 {
                 String str = scan.nextLine();
                 if (str.isEmpty()) {
                     if (curr > prev) {
-                        System.out.println(curr);
                         ans = curr;
                         prev = curr;
                     }
