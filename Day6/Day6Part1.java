@@ -25,16 +25,15 @@ public class Day6Part1 {
     }
 
     public static boolean loop(String str, int i) {
+        boolean bool = true;
         for (int j = i; j < i+3; j++) {
             for (int k = j+1; k < i+4; k++) {
-                if (str.charAt(j) == str.charAt(k)) {
+                bool = (str.charAt(j) == str.charAt(k)) ? false : ((str.charAt(j) != str.charAt(k)) && (j == i+2 && k == i+3)) ? true : true;
+                if (!bool) {
                     return false;
-                }
-                else if ((str.charAt(j) != str.charAt(k)) && (j == i+2 && k == i+3)) {
-                    return true;
                 }
             }
         }
-        return false;
+        return true;
     }
 }
