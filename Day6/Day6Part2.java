@@ -13,7 +13,7 @@ public class Day6Part2 {
 
             String str = scan.next();
 
-            for (int i = 0; i < str.length()-3; i++) {
+            for (int i = 0; i < str.length()-13; i++) {
                 if (loop(str, i)) {
                     System.out.println(i+14);
                     return;
